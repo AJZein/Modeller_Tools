@@ -1,0 +1,26 @@
+1.1
+
+- Re-wrote replace_mutate function to be simpler
+- Added new feature to replace_mutate which allows you to specify an 'origin', a position on 
+the line near which mutations will be performed. This allows for the position of a replace_mutation
+to be specified exactly. See README for more details.
+- Fixed an issue where input structures would get altered by functions because they were mutable. 
+Made the structures into tuples to fix this.
+- Fixed an issue where linenum didnt begin at the sequence data
+- Minor changes to example, it now illustrates how to perform 2 different mutations in a single loop.
+- Added folder which contain the output files from a single run of example.ipynb
+
+1.1.1
+- Removed version number from filename to make it easier to import
+- Added version number as comment in example and mutator_functions
+- Re-wrote proximity_replace to be more accurate and handle some rare cases
+
+1.1.2
+- Fixed big issue with replace_mutate() where it didn't allign properly after rewrite in version 1.1
+- Made variable naming scheme a little more standard
+- Fixed an issue where proximity_replace() (a function called by replace_mutate()) would give an error if no matches were found
+- example.ipynb now acts on picchuEAAAAE5SGS.ali by default since the issue with replace_mutate() was not apparent in simpler alignment files
+- example.ipynb now shows how to add another SAGG unit on line 3, as well as reversing SAGG to GGAS
+- Updated README to reflect changes in example.ipynb
+- Removed example.py, simply copy the contents of example.ipynb if a .py file is needed.
+- version number updated to 1.1.2
